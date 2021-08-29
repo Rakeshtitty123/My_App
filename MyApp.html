@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <!--This is an example of buliding a proh=ject using bootstrap framework
+  here we have taken all the default classes from bootstrap framework and made the necessay changes as per our necessity-->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+      /*jumbotron is the normal heading webpage that introduces the webpage having welcome webpage*/
+        .jumbotron{
+          /*Here we assigned the background color*/
+            background-color:dodgerblue;
+            /*For text aligning at centre*/
+            /*background-image:url(file_name) this is the synax for adding an image at background*/
+            text-align:center;
+            margin-top: 50px;
+            color: white !important;
+            height: 450px;
+            padding-top: 80px;
+            padding-bottom: 10px !important;
+        }
+        .appuse{
+            text-align:center;
+            margin-top:50px;
+        }
+        #cards{
+           margin-left: 50px;
+           margin-right: 50px;
+          margin-top: 25px;
+        }
+        .footers{
+          /*if our div wants to span the whole webpage no need to mention the height and width values as they will be set by default value
+           we have to mention only thebackground color
+           If the default values are not upto the mark in that case wecan specify all the values */
+          /* height:600px;
+          width: 1250px; */
+          background-color: aqua;
+          margin-top:50px;
+          text-align:center;
+          padding-top:100px;
+          padding-bottom:50px;
+          border-image-width: 0%;
+        }
+    </style>
+    <title>My App Store</title>
+  </head>
+  <!--Thses are the attributes that should be given inorder to have scrollopsy data-spy will be for action to occur upon scrolling
+  data-target will be the navbar id that is given by us 
+and data offest is after how many pixels of scrolling the state has to be changed
+The optional data-offset attribute specifies the number of pixels to offset from top when calculating the position of scroll. 
+This is useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements. Default is 10 pixels.-->
+  <body data-spy="scroll" data-target="#navbar" data-offset="150">
+    <!--This is the navbar class-->
+    <!--In this class we used fixed-top for the navbar inorder to fix the navbar even if our webpage scrolls down-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--if we want to align the all menu attribute use this unorderd list with the list of classes-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!--Here active class is to highlight the hoem button throughout our webpage -->
+                <a class="nav-link active" aria-current="page" href="#jumbtrn">Home</a>
+              </li>
+              <li class="nav-item">
+                <!--Here we give href tag to the sections of our website so that whenever the user enters that particular area
+                then the specified tag will be active-->
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#lastfooter">Download My App</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <!--Here we define two input buttons with the types email and pwd-->
+              <input class="form-control me-2" type="email" placeholder="Email" aria-label="Email">
+              <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+              <!--For the button to appear green at all times we used the class btn btn-success-->
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Jumbotron class-->
+      <div class="jumbotron" id="jumbtrn">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+      <div class="appuse" id="middlep">
+          <h1>Why this app is awesome</h1>
+          <p>This app is awesome to use</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
+        <div class="col">
+          <div class="card h-100">
+            <!--For image to be inserted in our div we use img link we can set our width as per our desire and at src attribute give
+            the file name 
+          alt is used whenever the webpage is not available it displays the text-->
+            <img src="Mobile_Techn.jpg" alt="">
+            <div class="card-body" id="about">  
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="Mobile_Techn.jpg" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="Mobile_Techn.jpg" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer section-->
+      <div class="footers" id="lastfooter">
+          <h1>Download the App!</h1>
+          <p>Really why should I download the app??</p>
+          <!--Since or=ur image should be a linkwe added our image in anchor tag so that whever user clicks on the image it get redirected
+          to another webpage
+         we have given the value # to href so that the webpage reamins same even after we are clciking the image-->
+         <p><a href="#"><img src="Appstr.jpg" width="300px"></a></p>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
